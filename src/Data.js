@@ -102,7 +102,8 @@ window.onload = function (){
 //full reset
 function fullReset(){
     if(!confirm("Are you sure you want to reset your save?"))return;
-    window.localStorage.removeItem('ucRemakeSave')
-    location.reload()
+    if(!confirm("This isn't a prestige layer; this will reset your game. If you don't want that, don't continue."))return;
+    data = getDefaultObject()
+    save()
 }
 
