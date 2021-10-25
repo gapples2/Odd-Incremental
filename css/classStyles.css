@@ -1,0 +1,42 @@
+.flexBox {
+    text-align:center;
+}
+.generalTexts{
+    color: white;
+    font-family: DosisLight;
+}
+.derivative{
+    background-color: darkgoldenrod;
+    border: 3px solid gray;
+    margin-top: 10px;
+    min-height: 25px;
+    width: 250px;
+    font-family: DosisSemiBold;
+    height: 90px;
+    text-align: left;
+}
+.tab{
+    background-color: darkgoldenrod;
+    border: 3px solid gray;
+    min-width: 150px;
+    height: 25px;
+    font-family: DosisSemiBold;
+}
+.subtab{
+    background-color: darkgoldenrod;
+    border: 3px solid gray;
+    min-width: 100px;
+    height: 25px;
+    font-family: DosisSemiBold;
+}
+.exp{
+    background-color: purple;
+    border: 3px solid gray;
+    margin-top: 10px;
+    min-height: 25px;
+    width: 250px;
+    font-family: DosisSemiBold;
+}
+.tabBox{
+  margin-top: 20px;
+}
