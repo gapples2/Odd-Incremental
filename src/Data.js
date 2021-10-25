@@ -37,6 +37,7 @@ function load() {
 function fixSave(main=getDefaultObject(), data) {
     if (typeof data === "object") {
         let d = data
+        console.log(d)
         if(!Array.isArray(d))d=Object.keys(d)
         d.forEach(i => {
             if (main[i] instanceof Decimal) {
