@@ -38,6 +38,7 @@ function fixSave(main=getDefaultObject(), data) {
     if ((typeof main) == "object") {
         Object.keys(main).forEach(i => {
             if (main[i] instanceof Decimal) {
+              console.log(main[i])
                 main[i] = new Decimal(data[i]!==null?data[i]:main[i])
             } else if (typeof main[i]  == "object") {
                 fixSave(main[i], data[i])
