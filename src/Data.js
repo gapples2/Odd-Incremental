@@ -35,10 +35,8 @@ function load() {
 }
 //fix saves
 function fixSave(main=getDefaultObject(), data) {
-    if ((typeof data) == "object"&&data!=null) {
-        let d = data
-        if(!Array.isArray(d))d=Object.keys(d)
-        d.forEach(i => {
+    if ((typeof main) == "object") {
+        Object.keys(main).forEach(i => {
             if (main[i] instanceof Decimal) {
                 main[i] = new Decimal(data[i]!==null?data[i]:main[i])
             } else if (typeof main[i]  == "object") {
