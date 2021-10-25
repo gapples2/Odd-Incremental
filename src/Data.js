@@ -104,7 +104,7 @@ function fullReset(){
     if(!confirm("Are you sure you want to reset your save?"))return;
     if(!confirm("This isn't a prestige layer; this will reset your game. If you don't want that, don't continue."))return;
     data = getDefaultObject()
-    data.tab = 2
+    data.currentTab = 2
     changeTab(1)
     save()
 }
