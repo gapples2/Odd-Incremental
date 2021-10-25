@@ -20,7 +20,7 @@ function updateHTML(){
     document.getElementById("exponentReset").innerHTML = data.oddities.gte(1e10) ? 
       `Reset oddities and derivatives for:<br>${format(exponentGain())} exponents and ${format(highExponentGain())} high exponents.<br>Next at: ${format(exponentNextAt())} and ${heNextAt()} oddities.` :
       `Get 1e10 oddities to reset for exponents.<br><br>${format(new Decimal(1e10).minus(data.oddities))} more oddities required`
-    document.getElementById("expTxt").innerHTML = `You have done ${format(data.expResetTimes)} exponent resets.`
+    document.getElementById("expTxt").innerHTML = `Your Exponents and High Exponents boost D.1 power. [${format(tmp.exp.boost)}x]<br>You have done ${format(data.expResetTimes)} exponent resets.`
     document.getElementById("epTxt").innerText = `You have ${format(data.ep)} exponent power (+${format(data.epGain)}/sec), boosting all derivatives by ${format(epBoost())}.`
     if(data.expResetTimes>0){
       document.getElementById("exponentDisplay").innerText = `${format(data.exp)} Exponents`
@@ -36,7 +36,7 @@ function showAndHideStuff(){
   for(let i=0;i<data.ed.length;i++){
     document.getElementById(`ed${derivNames[i]}`).style.display = data.ed[i-1]?.u||i==0?"":"none"
   }
-  document.getElementById("tab2button").style.display = data.derivs[3].amt.gte(3)||data.expResetTimes>0?"":"none"
+  document.getElementById("tab2button").style.display = data.derivs[3].amt.gte(1)||data.expResetTimes>0?"":"none"
   document.getElementById("exponentPicsAndStuff").style.display = data.expResetTimes>0?"":"none"
   document.getElementById("subtab1expbutton").style.display = data.expResetTimes>=2?"":"none"
   document.getElementById("subtab2expbutton").style.display = data.expResetTimes>=2?"":"none"
