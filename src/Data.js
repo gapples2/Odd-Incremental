@@ -35,7 +35,8 @@ function load() {
 }
 //fix saves
 function fixSave(main=getDefaultObject(), data) {
-    if (typeof data == "object") {
+    if ((typeof data) == "object") {
+      console.log(data,typeof data)
         let d = data
         if(!Array.isArray(d))d=Object.keys(d)
         d.forEach(i => {
